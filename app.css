@@ -11,13 +11,15 @@
   --bg-light: #f7f9fc;
   --primary-btn-hover: #6d7a88;
 
+  --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
+
   /* Fonts */
   --body-font: "Anek Telugu", sans-serif;
   --heading-font: "Montserrat", sans-serif;
   --button-font: "Alegreya Sans SC", sans-serif;
 
   /* Sizes */
-  --h1-size: 90px;
+  --h1-size: 85px;
   --h1-height: 100px;
   --h2-size: 50px;
   --h2-height: 70px;
@@ -50,7 +52,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   padding: var(--spacing-sm) 0 0 0;
-  background-color: var(--purple-1);
+  background-color: var(--bg-white);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,26 +60,26 @@ body {
 }
 
 h1 {
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--h1-size);
   font-family: var(--heading-font);
   width: 100%;
   margin: 0;
-  letter-spacing: -4px;
+  letter-spacing: -2px;
   line-height: var(--h1-height);
 }
 h2 {
   font-family: var(--heading-font);
-  font-weight: 500;
-  font-size: var(--h2-size);
+  font-weight: 600;
+  font-size: var(--h3-size);
   margin: 0;
   width: 100%;
   letter-spacing: -2px;
-  line-height: var(--h2-height);
+  /* line-height: var(--h2-height); */
 }
 h3 {
   font-family: var(--heading-font);
-  font-weight: 500;
+  font-weight: 600;
   font-size: var(--h3-size);
   margin: 0;
   width: 100%;
@@ -302,4 +304,54 @@ main {
 .partners-grid img {
   height: 60px;
   place-self: center;
+}
+
+/* UNIFIED PLATFORM */
+.unified-platform-section {
+  padding: var(--spacing-xl) 0;
+}
+.unified-platform-section h2 {
+  width: 50%;
+  margin-bottom: var(--spacing-md);
+}
+
+.unified-platform-section .primary-button {
+  background-color: var(--purple-1);
+  margin: var(--spacing-md) 0;
+}
+.unified-platform-section .primary-button:hover {
+  background-color: var(--primary-accent);
+}
+
+/* GRAPHICS GRID */
+.graphic-grid {
+  display: grid;
+  grid-template-areas:
+    "card slack slack"
+    "phone slack slack"
+    "phone dash dash";
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+}
+
+#credit-card {
+  grid-area: card;
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
+}
+
+#slack-invoice {
+  grid-area: slack;
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
+}
+#phone {
+  grid-area: phone;
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
+}
+#dash {
+  grid-area: dash;
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
 }
